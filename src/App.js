@@ -1,22 +1,21 @@
 import React from "react";
 import Header from "./components/header/Header";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import MainPage from "./pages/MainPage";
+import "./style.scss";
+import HomePage from "./pages/home-page/HomePage";
+import MainPage from "./pages/main-page/MainPage";
 
 export default function App()
 {
     return(
         <Router>
-            <div>
+            <main className="main">
                 <Header />
-                <div className="container">
-                    <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/main-page" element={<MainPage />} />
-                    </Routes>
-                </div>
-            </div>
+                <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/main-page" element={<MainPage />} />
+                </Routes>
+            </main>
         </Router>
     );
 }

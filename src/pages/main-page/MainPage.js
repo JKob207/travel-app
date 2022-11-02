@@ -1,10 +1,11 @@
 import React from "react";
+import "./Main-page.scss";
 
 export default function MainPage()
 {
     return(
-        <div>
+        <section className="main-page">
             <h2>Main Page</h2>
-        </div>
+        </section>
     );
 }
