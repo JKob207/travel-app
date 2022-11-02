@@ -1,4 +1,25 @@
 .header
-{
+{   
+    display: flex;
+    justify-content: space-between;
     padding: 20px;
+    color: #fff;
+
+    .header--profile
+    {
+        display: flex;
+        align-items: center;
+
+        .header--profile--user-welcome
+        {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+        }
+
+        .header--profile--icon
+        {
+            margin-left: 10px;
+        }
+    }
 }
