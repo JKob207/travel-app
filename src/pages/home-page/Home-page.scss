@@ -36,19 +36,7 @@
 
             & > button
             {
-                width: 172px;
-                color: inherit;
-                font-family: 'Inter', sans-serif;
-                background-color: v.$base-color;
-                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                border-radius: 6px;
-                border: none;
-                padding: 10px 22px;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 19px;
-                text-align: center;
-                margin-bottom: 20px;
+                @include v.primary_button($width: 172px);
 
                 & > a
                 {

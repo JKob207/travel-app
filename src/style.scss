@@ -7,6 +7,10 @@
     font-family: 'Inter', sans-serif;
 }
 
+textarea:focus, input:focus{
+    outline: none;
+}
+
 .main
 {
     background-image: url("../public/images/background-road.png");

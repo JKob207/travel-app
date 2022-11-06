@@ -7,17 +7,17 @@ import MainPage from "./pages/main-page/MainPage";
 
 export default function App()
 {
-    const [notMainPage, setNotMainPage] = useState(false);
+    const [notMainPageHeader, setNotMainPageHeader] = useState(false);
 
     let location = useLocation();
 
     useEffect(() => {
-        if(location.pathname !== "/") setNotMainPage(true);
+        if(location.pathname !== "/") setNotMainPageHeader(true);
     }, [location])
 
     return(
             <main className="main">
-                <Header colorfulStyle={notMainPage}/>
+                <Header colorfulStyle={notMainPageHeader}/>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/main-page" element={<MainPage />} />

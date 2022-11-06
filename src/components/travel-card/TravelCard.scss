@@ -1,0 +1,43 @@
+@use "../../variables.scss" as v;
+
+.travel-card
+{
+    background-color: #fff;
+    margin: 0 15px;
+    padding: 5px 3px;
+    border-radius: 10px;
+
+    .card--image
+    {
+        margin: 0 auto;
+    }
+
+    .card--desc
+    {
+        padding-left: 3px;
+
+        .card--place
+        {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            color: #000;
+        }
+
+        .card--country
+        {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 16px;
+            color: v.$text-grey;
+        }
+    }
+
+    .card--view-more-btn
+        {
+            @include v.primary_button;
+            width: 99%;
+            margin-top: 25px;
+            margin-bottom: 2px;
+        }
+}
