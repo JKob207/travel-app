@@ -3,41 +3,81 @@
 .travel-card
 {
     background-color: #fff;
-    margin: 0 15px;
+    margin: 0 auto;
     padding: 5px 3px;
     border-radius: 10px;
+    width: 85%;
 
     .card--image
     {
         margin: 0 auto;
+        width: 100%;
+        border-radius: 5px;
     }
 
     .card--desc
     {
         padding-left: 3px;
+        margin-top: 5px;
 
         .card--place
         {
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 22px;
-            color: #000;
+            @include v.place-info;
         }
 
         .card--country
         {
-            font-weight: 300;
-            font-size: 14px;
-            line-height: 16px;
-            color: v.$text-grey;
+            @include v.country-info;
         }
     }
 
     .card--view-more-btn
-        {
-            @include v.primary_button;
-            width: 99%;
-            margin-top: 25px;
-            margin-bottom: 2px;
-        }
+    {
+        @include v.primary_button;
+        width: 99%;
+        margin-top: 25px;
+        margin-bottom: 2px;
+    }
+}
+
+.card--modal
+{
+    background-color: #fff;
+    height: 100vh;
+    padding: 23px;
+
+    .modal--img
+    {
+        width: 100%;
+        margin: 0 auto;
+        border-radius: 5px;
+    }
+
+    .modal-place
+    {
+        @include v.place-info;
+    }
+
+    .modal--country
+    {
+        @include v.country-info;
+    }
+
+    .modal--visited
+    {
+        @include v.primary_button;
+        margin-top: 20px;
+    }
+
+    .modal--close-btn
+    {
+        position: absolute;
+        top: 1px;
+        right: 5px;
+        font-size: 1.5em;
+        background: none;
+        border: none;
+        color: #000;
+        font-weight: bolder;
+    }
 }

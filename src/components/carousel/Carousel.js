@@ -21,7 +21,7 @@ export default function Carousel()
     ); 
 
     const carouselSettings = {
-        dots: false,
+        dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
@@ -34,7 +34,7 @@ export default function Carousel()
                 slidesToShow: 3,
                 slidesToScroll: 3,
                 infinite: true,
-                dots: true
+                dots: false
               }
             },
             {

@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "../../components/carousel/Carousel";
 import "./Main-page.scss";
 import SEARCH_ICON from "./search.png";
+import MAP from "../../images/map-dotted.png";
 
 export default function MainPage()
 {
@@ -19,6 +20,7 @@ export default function MainPage()
             </div>
             <div className="main-page--destinations">
                 <h2>Destinations</h2>
+                <img className="destinations-world-map" src={MAP} alt="World map" />
             </div>
         </section>
     );
