@@ -1,18 +1,46 @@
 import React from "react";
 import "./TravelCard.scss";
-import photo from "./test.png"
 import ReactModal from "react-modal";
 
 export default function TravelCard(props)
 {
-    const [showModal, setShowModal] = React.useState(false);
-    const [visitedPlace, setVisitedPlace] = React.useState(false);
-
-    const handleVisitClick = () => {
+    const handleVisitClick = (place) => {
        setVisitedPlace((prev) => {
+        toVisitedLocalStorage(place, !prev);
         return !prev;
        });
     };
+
+    const toVisitedLocalStorage = (place, add) =>
+    {
+        if(!add) //remove place from local storage
+        {
+            if(localStorage.getItem(place) !== null)
+            {
+                console.log("Remove item: " + place);
+                localStorage.removeItem(place)
+            }
+            return;
+        }
+        // add place to local storage
+        if(localStorage.getItem(place) === null)
+        {
+            localStorage.setItem(place, true);
+        }
+    }
+
+    const checkLocalStorage = (place) =>
+    {
+        if(localStorage.getItem(place))
+        {
+            return true;
+        }
+        return false;
+    }
+
+    // Hooks
+    const [showModal, setShowModal] = React.useState(false);
+    const [visitedPlace, setVisitedPlace] = React.useState(() => checkLocalStorage(props.place));
 
     return(
         <div className="travel-card">
@@ -46,7 +74,7 @@ export default function TravelCard(props)
                 </p>
                 <button className="modal--visited" 
                     style={visitedPlace ? {backgroundColor: "#808000"} : {}}
-                    onClick={handleVisitClick}>
+                    onClick={() => handleVisitClick(props.place)}>
                     {
                         visitedPlace ? "Place visited" : "Add to visited"
                     }
