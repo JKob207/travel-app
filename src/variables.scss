@@ -1,6 +1,7 @@
 $base-color: #F6AE2D;
 $text-grey: #686868;
 $background-grey-color: #F5F5F5;
+$breakForMobile: 600px;
 
 @mixin primary_button($width: 100%)
 {

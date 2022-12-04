@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import data from "../../travelData";
 
-export default function Carousel({searchPlace})
+export default function Carousel({searchPlace, isFilterOn})
 {
   const [travelData, setTravelData] = React.useState(
     data.map(travel => {
@@ -18,8 +18,8 @@ export default function Carousel({searchPlace})
             imgSrc={travel.imgSrc}
         />
     })
-);
-const [filterOn, setFilterOn] = React.useState(false); 
+  );
+  const [filterOn, setFilterOn] = React.useState(false); 
 
   React.useEffect(() => {
     searchPlaceFunc(searchPlace);
@@ -46,6 +46,7 @@ const [filterOn, setFilterOn] = React.useState(false);
         });
       });
       setFilterOn(true);
+      isFilterOn(true);
     }else
     {
       setTravelData(() => {
@@ -62,6 +63,7 @@ const [filterOn, setFilterOn] = React.useState(false);
         });
       });
       setFilterOn(false);
+      isFilterOn(false);
     }
   }
 

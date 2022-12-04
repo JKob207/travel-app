@@ -8,6 +8,7 @@ export default function MainPage()
 {
     const [searchedPlaceInput, setSearchedPlaceInput] = React.useState("");
     const [searchPlace, setSearchPlace] = React.useState("");
+    const [isFilter, setIsFilter] = React.useState(false);
     
 
     const handleChangeSearch = (event) =>
@@ -18,6 +19,16 @@ export default function MainPage()
     const handleSearchPlace = () =>
     {
         setSearchPlace(searchedPlaceInput);
+    }
+
+    const isFilterOn = (filter) =>
+    {
+        if(filter)
+        {
+            setIsFilter(true);
+            return;
+        }
+        setIsFilter(false);
     }
 
     return(
@@ -36,9 +47,13 @@ export default function MainPage()
                 </span>
             </div>
             <div className="main-page--discover-section">
-                <h2>Discover</h2>
+                <h2>
+                    {
+                      isFilter ? "Place founded" : "Discover"  
+                    }
+                </h2>
                 <div className="main-page--discover-slider">
-                    <Carousel searchPlace={searchPlace} />
+                    <Carousel searchPlace={searchPlace} isFilterOn={isFilterOn} />
                 </div>
             </div>
             <div className="main-page--destinations">

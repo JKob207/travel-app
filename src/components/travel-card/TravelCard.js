@@ -59,7 +59,7 @@ export default function TravelCard(props)
             <ReactModal
                 isOpen={showModal}
                 contentLabel="modal"
-                ariaHideApp={showModal}
+                ariaHideApp={false}
                 className="card--modal"
             >
                 <img className="modal--img" src={require("../../images/"+props.imgSrc)}/>

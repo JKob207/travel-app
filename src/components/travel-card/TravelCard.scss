@@ -42,6 +42,7 @@
 
 .card--modal
 {
+    position: relative;
     background-color: #fff;
     height: 100vh;
     padding: 23px;
@@ -84,5 +85,19 @@
         border: none;
         color: #000;
         font-weight: bolder;
+    }
+}
+
+@media (max-width: v.$breakForMobile)
+{
+    
+}
+
+@media (min-width: (v.$breakForMobile + 1)) 
+{
+    .card--modal
+    {
+        width: 50%;
+        margin: 0 auto;
     }
 }

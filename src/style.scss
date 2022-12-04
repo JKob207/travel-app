@@ -1,6 +1,6 @@
 *
 {
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -13,5 +13,6 @@ textarea:focus, input:focus{
 
 .main
 {
-    background-image: url("../src/images/background-road.png");
+    background-image: url("../src/images/background-road.jpg");
+    background-size: cover;
 }

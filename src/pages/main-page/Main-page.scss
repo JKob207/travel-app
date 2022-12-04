@@ -2,8 +2,9 @@
 
 .main-page
 {
-    height: 100vh;
+    height: 89vh;
     background-color: v.$background-grey-color;
+    overflow-y: scroll;
 
     .main-page--search-bar
     {
@@ -21,11 +22,17 @@
 
         .main-page--search-input
         {
+            width: 95%;
             border: none;
             font-size: 13px;
             line-height: 16px;
             color: v.$text-grey;
         }
+    }
+
+    .main-page--destinations
+    {
+        text-align: center;
     }
 
     .main-page--discover-section, .main-page--destinations
@@ -42,9 +49,21 @@
             margin-bottom: 30px;
         }
     }
+}
 
+
+@media (max-width: v.$breakForMobile)
+{
     .destinations-world-map
     {
         width: 100%;
+    }
+}
+
+@media (min-width: (v.$breakForMobile + 1)) 
+{
+    .destinations-world-map
+    {
+        width: 40%;
     }
 }
