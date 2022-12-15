@@ -17,7 +17,7 @@ export default function Header(props)
             {
                 props.colorfulStyle &&
                 <div className="header--profile">
-                    <span className="header--profile--user-welcome">Hi, Simon</span>
+                    <span className="header--profile--user-welcome">Hi, User</span>
                     <img className="header--profile--icon" src={PROFILE_PICTURE} alt="Profile picture" />
                 </div>
             }

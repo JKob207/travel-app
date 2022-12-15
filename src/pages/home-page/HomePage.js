@@ -20,11 +20,6 @@ export default function HomePage()
                             Sign In
                         </a>
                     </button>
-                    <button className="home-page--register-btn">
-                        <a href="/main-page">
-                            Sign Up
-                        </a>
-                    </button>
                 </div>
             </div>
         </section>
